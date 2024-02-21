@@ -1,0 +1,336 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e8f4f8;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
+}
+
+
+main>img {
+    position: relative;
+
+    width: 120px;
+    height: 48px;
+    top: 20px;
+}
+
+main {
+    background-color: #e8f4f8;
+    grid-column: 1/4;
+    grid-row: span 5;
+    grid-row: span 5;
+    display: flex;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerText {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 70%;
+    margin-top: 10em;
+    margin: 10em 0 0 10em;
+}
+
+.textareaEcrypte {
+    width: 95%;
+    height: auto;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-style: none;
+    border-color: Transparent;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 400;
+    background-color: transparent;
+    color: #0a3871;
+}
+
+.textareaEcrypte::placeholder {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #0a3871;
+}
+
+.container-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btnEcrypte {
+    width: 328px;
+    height: 67px;
+    background-color: #0a3871;
+    color: white;
+    border-radius: 24px;
+    padding: 24px;
+    margin-right: 5px;
+}
+
+.btnDescrypte {
+    width: 328px;
+    height: 67px;
+    background-color: transparent;
+    color: #0a3871;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+#warningContainer {
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+.warningText {
+    margin: 0 5px;
+    color: #495057;
+    opacity: 80%;
+}
+
+.iconInfo {
+    width: 39px;
+    height: 30px;
+}
+
+.section-answer {
+    grid-column: 4/6;
+    grid-row: span 5;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container1Hidden {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.retangulo-answer-codified {
+    border-radius: 32px;
+
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+}
+
+
+.answer-codified-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 87%;
+}
+
+.answer-codified {
+    width: 70%;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-style: none;
+    border-color: Transparent;
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: 400;
+    background-color: transparent;
+    color: #495057;
+}
+
+.btnCopy {
+    width: 328px;
+    height: 67px;
+    background-color: transparent;
+    color: #0a3871;
+    border-radius: 24px;
+    padding: 24px;
+}
+
+button:focus {
+    cursor: pointer;
+}
+
+.containerBtnResult {
+    margin-top: 5px;
+}
+
+.imgMuneco {
+    width: 80%;
+    height: 50%;
+}
+
+.contenedortextResult {
+    width: 60%;
+    text-align: center;
+
+}
+
+.section-answer-info__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: #343A40;
+    margin-bottom: 15px;
+
+}
+
+.section-answer-info__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.8px;
+    color: #495057;
+
+
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1265px) {
+
+    body {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    main {
+        grid-column: 1/4;
+        grid-row: span 5;
+        width: 100%;
+
+    }
+
+    main>img {
+        position: relative;
+        width: 60px;
+        height: 38px;
+        top: 5px;
+    }
+
+    .containerText {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 70%;
+
+        margin: 5em 0 0 1em;
+    }
+
+    #row {
+
+        width: 100%;
+    }
+
+    .container-button {
+
+        width: 100%;
+
+
+    }
+
+    .btnEcrypte {
+        width: 40%;
+        height: 57px;
+        padding: 5px;
+        margin-right: 5px;
+    }
+
+    .btnDescrypte {
+        width: 40%;
+        height: 57px;
+        padding: 5px;
+
+    }
+
+    .section-answer {
+        grid-column: 4/6;
+        grid-row: span 5;
+        border: 2px solid blueviolet;
+    }
+}
+
+
+
+
+@media screen and (min-width: 350px) and (max-width: 800px) {
+
+
+    body {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    main {
+        grid-column: span 6;
+        grid-row: span 3;
+        width: 100%;
+    }
+
+    main>img {
+        position: relative;
+        width: 60px;
+        height: 38px;
+        top: 5px;
+    }
+
+    .containerText {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 70%;
+
+        margin: 5em 0 0 1em;
+    }
+
+    #row {
+
+        width: 80%;
+    }
+
+    .container-button {
+
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnEcrypte {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .btnDescrypte {
+        width: 100%;
+    }
+
+    .section-answer {
+        grid-column: span 6;
+        grid-row: span 2;
+
+    }
+
+
+
+}
