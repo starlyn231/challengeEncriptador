@@ -8,6 +8,7 @@
     <title>Challenge Encriptador</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="snackbar.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet"
@@ -54,12 +55,17 @@
                     <textarea class="answer-codified"></textarea>
                 </div>
                 <div class="containerBtnResult">
-                    <button class="btnCopy">Copiar</button>
+                    <button onclick="copy()" class="btnCopy">Copiar</button>
                 </div>
             </div>
         </div>
+        <div id="snackbar" class="snackbar">
+            <div id="snackbar-content"></div>
+        </div>
     </section>
     <script src="app.js"></script>
+    <script src="showSnackbar.js"></script>
+
 </body>
 
 </html>

@@ -11,6 +11,7 @@ console.log(myButton);
 myButton.addEventListener("click", myFunction);
 
 function myFunction() {
+
     const textareaValue = myTextarea.value !== undefined ? myTextarea.value.trim() : '';
     console.log(' value textareaValue: ', textareaValue)
     if (textareaValue !== "") {
@@ -52,11 +53,12 @@ function myFunction() {
             answerCodified.value = encriptado;
 
         } else {
-            alert('El texto debe contener solo letras minúsculas y sin caracteres especiales.')
+            showSnackbar('El texto debe contener solo letras minúsculas y sin caracteres especiales.')
         }
     } else {
         // Mostrar el mensaje de no contenido si no hay texto
-        alert(' Insertar data en el input')
+        showSnackbar(' Insertar data en el input')
+
         noContent.style.display = "flex";
         // Ocultar el contenido
         content.style.display = "none";
@@ -91,7 +93,7 @@ function decrypt() {
                 return newtext;
             };
 
-            desencript(textareaValue);
+            // desencript(textareaValue);
             // Mostrar el contenido si hay texto
             content.style.display = "flex";
             // Ocultar el mensaje de no contenido
@@ -100,7 +102,7 @@ function decrypt() {
             answerCodified.value = desencript(textareaValue);
 
         } else {
-            alert('El texto debe contener solo letras minúsculas y sin caracteres especiales.')
+            showSnackbar('El texto debe contener solo letras minúsculas y sin caracteres especiales.')
             noContent.style.display = "flex";
             // Ocultar el contenido
             content.style.display = "none";
@@ -108,13 +110,20 @@ function decrypt() {
         }
     } else {
         // Mostrar el mensaje de no contenido si no hay texto
-        alert(' Insertar data en el input')
+        showSnackbar(' Insertar data en el input')
         noContent.style.display = "flex";
         // Ocultar el contenido
         content.style.display = "none";
     }
 }
+function copy() {
+    answerCodified.select();
+    console.log('answerCodified', answerCodified.value)
+    navigator.clipboard.writeText(answerCodified.value);
 
+    // Alert the copied text
+    alert("Texto Copiado:  " + answerCodified.value);
+}
 textarea.addEventListener('input', function () {
     this.style.height = 'auto'; // Restaurar la altura a auto para calcular la altura del contenido
     this.style.height = (this.scrollHeight) + 'px'; // Ajustar la altura al contenido
