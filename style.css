@@ -267,7 +267,7 @@ button:focus {
     .section-answer {
         grid-column: 4/6;
         grid-row: span 5;
-        border: 2px solid blueviolet;
+
     }
 }
 
